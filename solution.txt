@@ -1,0 +1,35 @@
+SELECT *
+FROM credit_card_transactions
+WHERE purchase_date = '27/10/2019';
+
+SELECT *
+FROM resturants
+JOIN credit_card_transactions
+ON resturants.resturant_id = credit_card_transactions.merchant_id
+WHERE purchase_date = '27/10/2019';
+
+SELECT *
+FROM persons
+WHERE id = 408; //Now you know who was murdered
+
+SELECT *
+FROM slack_users
+WHERE email = 'vincent@coder1337.io.se';
+
+SELECT *
+FROM slack_messages
+WHERE sender_id = 137;
+
+SELECT * 
+FROM slack_users
+WHERE id = 239;
+
+SELECT *
+FROM slack_users
+JOIN persons
+ON slack_users.email = persons.email
+WHERE slack_users.email = 'hejhejsanhola@elina.io';
+
+SELECT *
+FROM slack_messages
+WHERE sender_id = '666'; //Write this query to be sure of who the real murderer was.
